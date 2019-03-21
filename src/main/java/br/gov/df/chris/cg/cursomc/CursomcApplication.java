@@ -8,14 +8,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.builder.SpringApplicationBuilder;
-import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;  
+
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
 
 
 @SpringBootApplication
-public class CursomcApplication extends SpringBootServletInitializer implements CommandLineRunner {
+public class CursomcApplication implements CommandLineRunner {
 
     @Autowired
     private CategoriaRepository categoriaRepository;
@@ -35,11 +34,6 @@ public class CursomcApplication extends SpringBootServletInitializer implements 
     private PagamentoRepository pagamentoRepository;
     @Autowired
     private ItemPedidoRepository itemPedidoRepository;
-
-    @Override
-    protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-	return application.sources(CursomcApplication.class);
-    }
 
     public static void main(String[] args) {
         SpringApplication.run(CursomcApplication.class, args);
