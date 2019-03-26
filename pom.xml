@@ -107,7 +107,7 @@
                                             <exec>
                                                 <args>java</args>
                                                 <args>-jar</args>
-                                                <args>/maven/${project.artifactId}-${project.version}.jar</args>
+                                                <args>/maven/${project.artifactId}.jar</args>
                                             </exec>
                                         </entryPoint>
                                         <assembly>
